@@ -1,0 +1,777 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawerLayout"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+
+
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      >
+     <com.eapro.testingadv.CustomToolbar
+         android:id="@+id/customToolbar"
+         android:layout_width="match_parent"
+        android:background="@color/black"
+         android:layout_height="wrap_content"
+         android:paddingStart="0dp"
+         android:paddingEnd="0dp"/>
+
+
+     <HorizontalScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="75dp"
+         android:scrollbars="horizontal">
+
+         <ScrollView
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:scrollbars="vertical">
+
+
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/my_bg"
+                android:columnCount="3"
+                android:rowCount="4"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:id="@+id/card_test"
+                    android:background="@color/yellow"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/battry"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:id="@+id/tv_battery"
+                            android:text="Battery"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Battery Voltage"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/battry_v"
+                            android:text="123V"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Batter Mode"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/battery_mode"
+                            android:text="123V"
+                            android:textSize="16sp"
+
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Modern Card 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/upsvoltage"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Ups Voltage"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Input voltage "
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/input_v"
+                            android:text="000"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Output voltage "
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/output_v"
+                            android:text="000"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Modern Card 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/load"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Load"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Load percentage"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/loadper"
+                            android:text="123V"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Load Run on"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mains "
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="255dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="255dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/solor"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Solar"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dynamic_solar_cc"
+                            android:layout_marginTop="8dp"
+                            android:text="Solar Charg. Cur."
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/solar_cc"
+                            android:text="123V"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Solar Load Curr."
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                                android:id="@+id/solar_slc"
+                            android:text="123V"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/test_solar"
+                            android:text="test_solar"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/battry"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Alerts"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Inverter Alerts"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Inv_alerts"
+                            android:text="none"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/battry"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="ON/OFF Swit."
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="off here"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+
+                        <!-- Toggle Button for ON/OFF -->
+                        <ToggleButton
+                            android:id="@+id/on_toogle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textOn="ON"
+                            android:textOff="OFF"
+                            android:checked="false"
+                            android:textColor="@android:color/black" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView7"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/battry"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Mode  Swit."
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/toggle_uppdates"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Normal"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+
+                        <Switch
+                            android:id="@+id/mode_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textOn="Ups"
+                            android:textOff="Normal"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView8"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/battry"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Low/High."
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/high_updates"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Low"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+
+                        <!-- Toggle Button for ON/OFF -->
+                        <ToggleButton
+                            android:id="@+id/Low_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textOn="High"
+                            android:textOff="Low"
+                            android:checked="false"
+                            android:textColor="@android:color/black" />
+
+
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+                        <!-- Card Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Saving option"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <!-- Card Subtitle -->
+
+
+                        <!-- Dynamic Data -->
+
+
+                        <!-- Spinner for SL-1 to SL-4 -->
+                        <Spinner
+                            android:id="@+id/slSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/sl_options" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="235dp"
+                    android:layout_margin="12dp"
+                    android:background="@android:color/white"
+                    android:padding="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/light_salmon_pink"
+                    app:cardMaxElevation="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="150dp"
+                        android:layout_height="235dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal">
+
+                        <!-- Icon or Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circularImageView9"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="4dp"
+                            android:src="@drawable/battry"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp" />
+
+
+
+                        <!-- Card Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Total Kwh"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Dynamic Data -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/solar_kwh"
+                            android:layout_height="wrap_content"
+                            android:text="123V"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card Title -->
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:background="@color/white"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp" />
+
+
+
+
+            </GridLayout>
+         </ScrollView>
+
+     </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@color/icon_text_color_state"
+        app:itemRippleColor="@color/rippleColor"
+        app:itemShapeFillColor="@color/shape_fill_color"
+        app:itemTextColor="@color/icon_text_color_state"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">testingadv</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+
+    <string-array name="select_s.no">
+        <item>Gst1234567890</item>
+        <item>Gst1234567870</item>
+        <item>Gst1234567860 3</item>
+    </string-array>
+
+
+    <string-array name="sl_options">
+        <item>SL-1</item>
+        <item>SL-2</item>
+        <item>SL-3</item>
+        <item>SL-4</item>
+    </string-array>
+</resources>

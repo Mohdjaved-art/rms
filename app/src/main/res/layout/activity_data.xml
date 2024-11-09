@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    >
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/custom_toolbar" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/table_heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp">
+
+
+        <TableRow
+            android:layout_height="55dp"
+            android:layout_width="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/date"
+
+                android:text="dd/mm/yyyy"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/time"
+                android:text="Time"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/ipvolt"
+                android:text="IP-V"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/op_volt"
+                android:text="OP-V"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/batry_volt"
+                android:text="b-volt"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/inv_cc"
+                android:text="Inv-C"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/inv_load"
+                android:text="Inv-l"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/inv_scc"
+                android:text="Inv-Scc"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/inv_solarkwh"
+                android:text="S-kwh"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/onoff"
+                android:text="On-Off"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/inv_chargingmode"
+                android:text="Inv-cm"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/savingLevel"
+                android:text="S-l"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/alerts"
+                android:text="Alerts"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                style="@style/table_header"
+                android:id="@+id/inv_displaytime"
+                android:text="D-Time"
+                android:textSize="20sp"/>
+        </TableRow>
+    </TableLayout>
+
+</HorizontalScrollView>
+
+    <!-- Table Header -->
+
+    <!-- RecyclerView for Data -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+      />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyCircularImageView">
+        <item name="shapeAppearanceOverlay">@style/MyCircleShape</item>
+    </style>
+
+    <style name="MyCircleShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">150%</item> <!-- 50% ensures a circular shape -->
+    </style>
+
+
+
+</resources>
+
+
+
+
